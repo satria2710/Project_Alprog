@@ -21,4 +21,4 @@ Sistem kendali infrastruktur kritis memerlukan validasi akses yang cepat, tanggu
 ## 🚀 Panduan Instalasi & Menjalankan
 1. *Clone repository* ini ke mesin lokal Anda:
    ```bash
-   git clone [https://github.com/UsernameKamu/Project_Alprog.git](https://github.com/UsernameKamu/Project_Alprog.git)
+   git clone [https://github.com/satria2710/Project_Alprog.git](https://github.com/satria2710/Project_Alprog.git)
