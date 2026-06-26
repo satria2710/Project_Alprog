@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project_Alprog.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#0F2027" Offset="0.0" />
+            <GradientStop Color="#203A43" Offset="0.5" />
+            <GradientStop Color="#2C5364" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid Padding="20">
+        <Frame BackgroundColor="#F8F9FA" 
+               CornerRadius="20" 
+               Padding="30,40"
+               VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               MaximumWidthRequest="400"
+               HasShadow="True">
+
+            <VerticalStackLayout Spacing="20">
+
+                <Label Text="🌍" FontSize="45" HorizontalOptions="Center" />
+
+                <Label Text="EARTHQUAKE" 
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#2C3E50" 
+                       CharacterSpacing="2"/>
+
+                <Label Text="Early Warning System" 
+                       FontSize="16"
+                       FontAttributes="Italic"
+                       HorizontalOptions="Center"
+                       TextColor="#E67E22"
+                       Margin="0,-15,0,10" />
+
+                <Frame BorderColor="#E0E0E0" CornerRadius="10" Padding="10,0" HeightRequest="50" HasShadow="False">
+                    <Entry x:Name="UsernameEntry" 
+                           Placeholder="ID Operator (contoh: admin / user)" 
+                           TextColor="#333333"
+                           ClearButtonVisibility="WhileEditing" />
+                </Frame>
+
+                <Frame BorderColor="#E0E0E0" CornerRadius="10" Padding="10,0" HeightRequest="50" HasShadow="False">
+                    <Entry x:Name="PasswordEntry" 
+                           Placeholder="Kata Sandi (contoh: admin123)" 
+                           IsPassword="True" 
+                           TextColor="#333333"/>
+                </Frame>
+
+                <Button x:Name="LoginBtn"
+                        Text="OTORISASI AKSES"
+                        BackgroundColor="#E67E22"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        Margin="0,15,0,0"
+                        Clicked="LoginBtn_Clicked" />
+
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

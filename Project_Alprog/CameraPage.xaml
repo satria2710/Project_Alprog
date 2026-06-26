@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="Project_Alprog.CameraPage"
+             Title="Verifikasi Operator"
+             BackgroundColor="#121212">
+    <Grid RowDefinitions="Auto, *, Auto" Padding="20">
+
+        <VerticalStackLayout Grid.Row="0" Margin="0,10,0,20" Spacing="5">
+            <Label Text="Verifikasi Akses Seismik" 
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#E67E22" />
+            <Label Text="Posisikan wajah Anda tepat di dalam area pindai" 
+                   FontSize="14"
+                   HorizontalOptions="Center"
+                   TextColor="#B0BEC5" />
+        </VerticalStackLayout>
+
+        <Frame Grid.Row="1" 
+               BorderColor="#E67E22" 
+               CornerRadius="15" 
+               Padding="3" 
+               BackgroundColor="#1E1E1E"
+               HasShadow="True">
+
+            <cv:CameraView x:Name="CameraFeed" 
+                           HorizontalOptions="Fill" 
+                           VerticalOptions="Fill" />
+        </Frame>
+
+        <VerticalStackLayout Grid.Row="2" Margin="0,25,0,10" Spacing="10">
+            <ActivityIndicator IsRunning="True" Color="#E67E22" HorizontalOptions="Center" />
+            <Label Text="Memindai biometrik..."
+                   HorizontalOptions="Center"
+                   FontAttributes="Italic"
+                   TextColor="#B0BEC5" />
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
